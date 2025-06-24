@@ -3,7 +3,7 @@ import { Button, Flex, Group, Stack, Text, Highlight } from "@mantine/core";
 import { IconBolt, IconBrain, IconSparkles } from "@tabler/icons-react";
 import style from "./TestCard.module.css";
 import clsx from "clsx";
-import { leagueSpartanClass } from "@/app/page";
+import { leagueSpartanClass } from "@/lib/font";
 
 export default function TestCard() {
   const { t } = useLanguage();

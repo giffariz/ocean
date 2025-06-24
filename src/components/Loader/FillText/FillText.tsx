@@ -9,7 +9,7 @@ import {
 } from "framer-motion";
 import "./FillText.css";
 import clsx from "clsx";
-import { leagueSpartanClass } from "@/app/page";
+import { leagueSpartanClass } from "@/lib/font";
 
 interface IFillTextProps {
     text: string;

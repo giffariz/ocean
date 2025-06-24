@@ -3,7 +3,7 @@ import CircularText from "@/components/ReactBits/CircularText/CircularText";
 import { AspectRatio, Image } from "@mantine/core";
 import { IconBrain } from "@tabler/icons-react";
 import "./BrainRing.css";
-import { leagueSpartanClass } from "@/app/page";
+import { leagueSpartanClass } from "@/lib/font";
 
 export default function BrainRing() {
     return (

@@ -5,18 +5,12 @@ import LanguageToggle from "@/components/LanguageToggle/LanguageToggle";
 import BrainRing from "@/components/Content/Home/BrainRing/BrainRing";
 import { useLanguage } from "@/context/LanguageContext";
 import { IconSparkles } from "@tabler/icons-react";
-import { League_Spartan } from "next/font/google";
 import ScrollVelocity from "@/components/ReactBits/ScrollVelocity/ScrollVelocity";
 import CharactersCard from "../components/Content/Home/CharactersCard/CharactersCard";
 import clsx from "clsx";
 import TestCard from "@/components/Content/Home/TestCard/TestCard";
 import Footer from "@/components/Content/Home/Footer/Footer";
-
-const leagueSpartan = League_Spartan({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-export const leagueSpartanClass = leagueSpartan.className;
+import { leagueSpartanClass } from "@/lib/font";
 
 export default function Home() {
   const { t } = useLanguage();

@@ -10,8 +10,8 @@ import {
 import style from "./CharactersCard.module.css";
 import { IconSparkles } from "@tabler/icons-react";
 import { useLanguage } from "@/context/LanguageContext";
-import { leagueSpartanClass } from "@/app/page";
 import clsx from "clsx";
+import { leagueSpartanClass } from "@/lib/font";
 
 export default function CharactersCard() {
   const { t } = useLanguage();

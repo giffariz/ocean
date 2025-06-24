@@ -1,5 +1,5 @@
-import { leagueSpartanClass } from "@/app/page";
 import { useLanguage } from "@/context/LanguageContext";
+import { leagueSpartanClass } from "@/lib/font";
 import { Flex, Group, Stack, Text } from "@mantine/core";
 import { IconBrain, IconTarget, IconUserCircle } from "@tabler/icons-react";
 
