@@ -1,95 +1,98 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import { AppShell, Grid, Group, Stack, Text, Title } from "@mantine/core";
+import style from "./page.module.css";
+import LanguageToggle from "@/components/LanguageToggle/LanguageToggle";
+import BrainRing from "@/components/Content/Home/BrainRing/BrainRing";
+import { useLanguage } from "@/context/LanguageContext";
+import { IconSparkles } from "@tabler/icons-react";
+import { League_Spartan } from "next/font/google";
+import ScrollVelocity from "@/components/ReactBits/ScrollVelocity/ScrollVelocity";
+import CharactersCard from "../components/Content/Home/CharactersCard/CharactersCard";
+import clsx from "clsx";
+import TestCard from "@/components/Content/Home/TestCard/TestCard";
+import Footer from "@/components/Content/Home/Footer/Footer";
+
+const leagueSpartan = League_Spartan();
+export const leagueSpartanClass = leagueSpartan.className;
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const { t } = useLanguage();
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  return (
+    <AppShell header={{ height: 60 }} padding="md" withBorder={false}>
+      <AppShell.Header className={style.header}>
+        <Group
+          w={{ base: "60%", md: "20%" }}
+          align="center"
+          justify="space-between"
+          px={"sm"}
+          py={"xs"}
+          className={style.glassmorphism}
+        >
+          <Text fw={700} c={"var(--mantine-color-lime-4)"} size="xl">
+            OCEAN
+          </Text>
+          <LanguageToggle />
+        </Group>
+      </AppShell.Header>
+
+      <AppShell.Main className={style.main}>
+        <Grid
+          w={"90%"}
+          px={"md"}
+          style={{ height: "max-content" }}
+          mt={{ base: "20px", md: "40px" }}
+        >
+          <Grid.Col span={{ base: 12, md: 7 }} className={style.wrapper}>
+            <Stack mb={{ base: "20px", lg: "40px" }}>
+              <Group mb={{ base: "-20px", lg: "-30px" }}>
+                <IconSparkles className={style.icon} />
+                <Title order={5} className={style.title1}>
+                  {t.home.title1.toUpperCase()}
+                </Title>
+              </Group>
+              <Title
+                order={1}
+                className={clsx(leagueSpartanClass, style.title2)}
+              >
+                {t.home.title2}
+              </Title>
+              <Text className={style.greeting}>{t.home.greeting}</Text>
+            </Stack>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 5 }} className={style.wrapper}>
+            <BrainRing />
+          </Grid.Col>
+        </Grid>
+
+        <div className={style.characters}>
+          <div className={style.velocity} style={{ color: "#1f1f1f" }}>
+            <ScrollVelocity
+              texts={[t.characacters.title2.toLowerCase() + " ."]}
+              velocity={30}
+              className={leagueSpartanClass}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+          </div>
+
+          <CharactersCard />
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className={style.test}>
+          <div className={style.velocity} style={{ color: "black" }}>
+            <ScrollVelocity
+              texts={[t.test.title1.toLowerCase() + " ."]}
+              velocity={30}
+              className={leagueSpartanClass}
+            />
+          </div>
+
+          <TestCard />
+        </div>
+
+        <div className={style.footer}>
+          <Footer />
+        </div>
+      </AppShell.Main>
+    </AppShell>
   );
 }

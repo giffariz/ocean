@@ -1,0 +1,32 @@
+.wrapper {
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  pointer-events: none;
+}
+
+.ring {
+  width: 100%;
+  border: 5px solid var(--mantine-color-lime-4);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.chars-image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50%;
+  opacity: 0.25;
+}
+
+.icon-brain {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  color: var(--mantine-color-lime-4);
+}
