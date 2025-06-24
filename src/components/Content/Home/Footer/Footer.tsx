@@ -26,6 +26,7 @@ export default function Footer() {
                 fw={700}
                 size="xl"
                 style={{ lineHeight: "0.9" }}
+                c="white"
               >
                 {item.title}
               </Text>
@@ -36,11 +37,12 @@ export default function Footer() {
                   target="_blank"
                   size="sm"
                   fw={300}
+                  c="dimmed"
                 >
                   {item.description}
                 </Text>
               ) : (
-                <Text size="sm" fw={300}>
+                <Text size="sm" fw={300} c="dimmed">
                   {item.description}
                 </Text>
               )}
@@ -49,7 +51,7 @@ export default function Footer() {
         ))}
       </Flex>
       <Group gap={3} mt={"xl"}>
-        <Text>{t.footer.copyright}</Text>
+        <Text c="white">{t.footer.copyright}</Text>
         <Text
           component="a"
           href="https://www.giffariz.com"
