@@ -12,7 +12,10 @@ import clsx from "clsx";
 import TestCard from "@/components/Content/Home/TestCard/TestCard";
 import Footer from "@/components/Content/Home/Footer/Footer";
 
-const leagueSpartan = League_Spartan();
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 export const leagueSpartanClass = leagueSpartan.className;
 
 export default function Home() {
