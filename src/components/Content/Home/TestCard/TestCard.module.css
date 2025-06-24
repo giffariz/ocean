@@ -1,0 +1,42 @@
+.icon {
+  stroke: var(--mantine-color-lime-4);
+  fill: var(--mantine-color-lime-4);
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $mantine-breakpoint-lg) {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.title1 {
+  color: var(--mantine-color-lime-4);
+  padding: 0;
+  margin-left: -10px;
+  font-weight: 400;
+  @media (min-width: $mantine-breakpoint-lg) {
+    font-size: 20px;
+  }
+}
+
+.title2 {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 0.8;
+  font-weight: 700;
+  font-size: 40px;
+  @media (min-width: $mantine-breakpoint-lg) {
+    letter-spacing: -3px;
+    font-size: 60px;
+  }
+}
+
+.description {
+  margin-top: 20px;
+  color: var(--mantine-color-gray-6);
+  @media (min-width: $mantine-breakpoint-lg) {
+    font-size: 24px;
+  }
+}
