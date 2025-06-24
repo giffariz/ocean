@@ -35,7 +35,21 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript defaultColorScheme="dark" forceColorScheme="dark" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+        style={{ backgroundColor: "#1f1f1f" }}
+      >
+        {typeof window === "undefined" && (
+          <div
+            style={{
+              position: "fixed",
+              inset: 0,
+              backgroundColor: "#1f1f1f",
+              zIndex: 99999,
+            }}
+          />
+        )}
+
         <MantineProvider withGlobalClasses withCssVariables>
           <PageTransition>
             <LanguageProvider>{children}</LanguageProvider>

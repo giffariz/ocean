@@ -32,7 +32,7 @@ export default function PageTransitionWrapper({ children }: Readonly<{ children:
                 {showOverlay && (
                     <motion.div
                         key="page-transition"
-                        initial={{ y: 0 }}
+                        initial={false}
                         animate={{ y: 0 }}
                         exit={{ y: "-100%" }}
                         transition={{ duration: 0.6, ease: [0.83, 0, 0.17, 1] }}
