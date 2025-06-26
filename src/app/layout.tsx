@@ -9,6 +9,7 @@ import {
 } from "@mantine/core";
 import { LanguageProvider } from "@/context/LanguageContext";
 import PageTransition from "@/components/Loader/PageTransition";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +39,10 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ backgroundColor: "#1f1f1f" }}>
         <MantineProvider withGlobalClasses withCssVariables>
           <PageTransition>
-            <LanguageProvider>{children}</LanguageProvider>
+            <LanguageProvider>
+              {children}
+              <Analytics />
+            </LanguageProvider>
           </PageTransition>
         </MantineProvider>
       </body>

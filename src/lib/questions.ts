@@ -36,7 +36,7 @@ const baseQuestions: Question[] = [
   { id: 19, text: { en: "I feel comfortable around people.", id: "Saya merasa nyaman berada di dekat orang lain." }, trait: "extraversion", reverse: false },
   { id: 20, text: { en: "I keep in the background.", id: "Saya lebih suka berada di balik layar." }, trait: "extraversion", reverse: true },
   { id: 21, text: { en: "I start conversations.", id: "Saya suka memulai percakapan." }, trait: "extraversion", reverse: false },
-  { id: 22, text: { en: "I have little to say.", id: "Saya tidak banyak bicara." }, trait: "extraversion", reverse: true },
+  { id: 22, text: { en: "I let others do the talking.", id: "Saya membiarkan orang lain yang lebih banyak berbicara." }, trait: "extraversion", reverse: true },
   { id: 23, text: { en: "I talk to a lot of different people at parties.", id: "Saya suka berbicara dengan banyak orang saat pesta." }, trait: "extraversion", reverse: false },
   { id: 24, text: { en: "I don't like to draw attention to myself.", id: "Saya tidak suka menarik perhatian untuk diri saya." }, trait: "extraversion", reverse: true },
 

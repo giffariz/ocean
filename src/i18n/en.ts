@@ -142,9 +142,10 @@ const en = {
         title2: "Reveal Your Trait",
         description: "Understand your personality through a fun yet scientific Big 5 test. Find out what makes your mind and soul unique. For a swift overview, try the Quick Test with 40 questions. Want deeper, more accurate results? Go for the Full Test with 140 questions.",
         quick1: "Quick Test",
-        quick2: "40 Questions",
+        quick2: "40 total Questions",
         full1: "Full Test",
-        full2: "140 Questions",
+        full2: "140 total Questions",
+        scaleLabels: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"],
     },
 
     footer: {
