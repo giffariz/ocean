@@ -1,0 +1,59 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.header,
+.footer {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+}
+
+.scrollWrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #101010;
+}
+
+.scrollArea {
+  flex: 1;
+  overflow: auto;
+  z-index: 1;
+}
+
+.vignetteTop,
+.vignetteBottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.vignetteTop {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+}
+
+.vignetteBottom {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+}

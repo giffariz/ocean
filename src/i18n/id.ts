@@ -170,9 +170,10 @@ const id = {
         title2: "Temukan Karaktermu",
         description: "Kenali kepribadianmu lewat tes Big 5 yang seru dan berbasis sains. Ungkap apa yang membuatmu unik luar dan dalam. Untuk gambaran umum, coba Tes Kilat dengan 40 pertanyaan. Mau hasil lebih akurat dan mendalam? Pilih Tes Lengkap dengan 140 pertanyaan.",
         quick1: "Tes Kilat",
-        quick2: "40 Pertanyaan",
+        quick2: "40 total Pertanyaan",
         full1: "Tes Lengkap",
-        full2: "140 Pertanyaan",
+        full2: "140 total Pertanyaan",
+        scaleLabels: ["Sangat Tidak", "Tidak", "Netral", "Setuju", "Sangat Setuju"],
     },
 
     footer: {
