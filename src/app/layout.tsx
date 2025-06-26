@@ -34,10 +34,22 @@ export default function RootLayout({
   return (
     <html lang="en" {...mantineHtmlProps}>
       <head>
-        <ColorSchemeScript defaultColorScheme="dark" forceColorScheme="dark" />
+        <ColorSchemeScript
+          nonce="8IBTHwOdqNKAWeKl7plt8g=="
+          defaultColorScheme="dark"
+          forceColorScheme="dark"
+        />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable}`} style={{ backgroundColor: "#1f1f1f" }}>
-        <MantineProvider withGlobalClasses withCssVariables>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable}`}
+        style={{ backgroundColor: "#1f1f1f" }}
+      >
+        <MantineProvider
+          withGlobalClasses
+          withCssVariables
+          defaultColorScheme="dark"
+          forceColorScheme="dark"
+        >
           <PageTransition>
             <LanguageProvider>
               {children}
