@@ -11,7 +11,7 @@ export default function PageTransitionWrapper({ children }: Readonly<{ children:
 
     const pageLoaderText: Record<string, string> = {
         "/test": "PREPARING",
-        "/result": "ANALYZING",
+        "/results": "ANALYZING",
         default: "LOADING",
     };
 
@@ -31,7 +31,7 @@ export default function PageTransitionWrapper({ children }: Readonly<{ children:
             <AnimatePresence mode="wait">
                 {showOverlay && (
                     <motion.div
-                        key="page-transition"
+                        key={`page-transition-${pathname}`}
                         initial={false}
                         animate={{ y: 0 }}
                         exit={{ y: "-100%" }}
@@ -47,12 +47,12 @@ export default function PageTransitionWrapper({ children }: Readonly<{ children:
                             overflow: "hidden",
                         }}
                     >
-                        <FillText text={loaderText} />
+                        <FillText key={`fill-text-${pathname}`} text={loaderText} />
 
                         <motion.div
+                            key={`progress-${pathname}`}
                             initial={{ scaleX: 0 }}
                             animate={{ scaleX: 1 }}
-                            exit={{ scaleX: 0 }}
                             transition={{ duration: 2.5, ease: "easeInOut" }}
                             style={{
                                 position: "absolute",

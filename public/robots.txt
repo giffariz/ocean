@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://ocean.giffariz.com
+
+# Sitemaps
+Sitemap: https://ocean.giffariz.com/sitemap.xml

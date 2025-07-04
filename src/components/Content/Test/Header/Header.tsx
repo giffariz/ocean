@@ -11,7 +11,7 @@ export const Header = ({ testType, progress }: IHeaderProps) => {
     const { t } = useLanguage();
   
   return (
-    <Stack w={{ base: "100%", lg: "30%" }} justify="center">
+    <Stack w={{ base: "100%", md: "30%" }} justify="center">
       <Group w={"100%"} align="center" justify="space-between">
         <Badge
           variant="outline"
