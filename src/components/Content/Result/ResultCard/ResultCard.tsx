@@ -20,7 +20,7 @@ export default function ResultCard({
   const radarData = scores
     ? Object.entries(scores).map(([trait, score]) => ({
         Trait: trait.charAt(0).toUpperCase(),
-        Score: score,
+        Score: score.toFixed(0),
       }))
     : [];
 
@@ -107,7 +107,9 @@ export default function ResultCard({
                   opacity: 0.5,
                 },
                 domain([dataMin, dataMax]) {
-                  return [dataMin - 30, dataMax + 10];
+                  const start = (dataMin - 10 <= 0) ? 0 : dataMin - 10;
+                  const end = (dataMax + 10 >= 100) ? 100 : dataMax + 10;
+                  return [start, end];
                 },
               }}
               bdrs={"xl"}

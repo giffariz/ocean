@@ -57,7 +57,7 @@ const baseQuestions: Question[] = [
   { id: 36, text: { en: "I seldom feel blue.", id: "Saya jarang merasa murung." }, trait: "neuroticism", reverse: true },
   { id: 37, text: { en: "I am easily disturbed.", id: "Saya mudah terganggu." }, trait: "neuroticism", reverse: false },
   { id: 38, text: { en: "I get upset easily.", id: "Saya mudah marah atau kesal." }, trait: "neuroticism", reverse: false },
-  { id: 39, text: { en: "I change my mood a lot.", id: "Suasana hati saya sering berubah-ubah." }, trait: "neuroticism", reverse: false },
+  { id: 39, text: { en: "I find it hard to stay emotionally steady.", id: "Saya sulit mempertahankan kestabilan emosi." }, trait: "neuroticism", reverse: false },
   { id: 40, text: { en: "I have frequent mood swings.", id: "Saya sering mengalami perubahan suasana hati." }, trait: "neuroticism", reverse: false },
 ]
 
@@ -69,10 +69,10 @@ const additionalQuestions: Question[] = [
   { id: 43, text: { en: "I enjoy wild flights of fantasy.", id: "Saya senang membayangkan hal-hal fantastis." }, trait: "openness", reverse: false },
   { id: 44, text: { en: "I am not interested in theoretical discussions.", id: "Saya tidak tertarik pada diskusi teoretis." }, trait: "openness", reverse: true },
   { id: 45, text: { en: "I love to read challenging material.", id: "Saya suka membaca materi yang menantang." }, trait: "openness", reverse: false },
-  { id: 46, text: { en: "I prefer to stick with things that I know.", id: "Saya lebih suka berpegang pada hal-hal yang sudah saya kenal." }, trait: "openness", reverse: true },
+  { id: 46, text: { en: "I prefer to stick with things that I know.", id: "Saya lebih suka berpegang pada hal-hal yang saya ketahui." }, trait: "openness", reverse: true },
   { id: 47, text: { en: "I enjoy thinking about things.", id: "Saya senang memikirkan berbagai hal." }, trait: "openness", reverse: false },
   { id: 48, text: { en: "I avoid complex people.", id: "Saya menghindari orang-orang yang rumit." }, trait: "openness", reverse: true },
-  { id: 49, text: { en: "I love to think up new ways of doing things.", id: "Saya senang menemukan cara baru dalam melakukan sesuatu." }, trait: "openness", reverse: false },
+  { id: 49, text: { en: "I love to think up new ways of doing things.", id: "Saya senang memikirkan cara baru dalam melakukan sesuatu." }, trait: "openness", reverse: false },
   { id: 50, text: { en: "I dislike changes.", id: "Saya tidak menyukai perubahan." }, trait: "openness", reverse: true },
   { id: 51, text: { en: "I carry the conversation to a higher level.", id: "Saya membawa percakapan ke tingkat yang lebih tinggi." }, trait: "openness", reverse: false },
   { id: 52, text: { en: "I will not probe deeply into a subject.", id: "Saya tidak mendalami suatu topik secara serius." }, trait: "openness", reverse: true },
@@ -81,7 +81,7 @@ const additionalQuestions: Question[] = [
   { id: 55, text: { en: "I like to solve complex problems.", id: "Saya suka memecahkan masalah yang kompleks." }, trait: "openness", reverse: false },
   { id: 56, text: { en: "I prefer simple to complex procedures.", id: "Saya lebih suka prosedur yang sederhana daripada yang rumit." }, trait: "openness", reverse: true },
   { id: 57, text: { en: "I formulate ideas clearly.", id: "Saya merumuskan ide dengan jelas." }, trait: "openness", reverse: false },
-  { id: 58, text: { en: "I rarely look for a deeper meaning in things.", id: "Saya jarang mencari makna yang lebih dalam dalam sesuatu." }, trait: "openness", reverse: true },
+  { id: 58, text: { en: "I rarely look for a deeper meaning in things.", id: "Saya jarang mencari makna yang lebih dalam terhadap sesuatu." }, trait: "openness", reverse: true },
   { id: 59, text: { en: "I spend time reflecting on things.", id: "Saya meluangkan waktu untuk merenungkan berbagai hal." }, trait: "openness", reverse: false },
   { id: 60, text: { en: "I do not like art.", id: "Saya tidak menyukai seni." }, trait: "openness", reverse: true },
 
@@ -91,7 +91,7 @@ const additionalQuestions: Question[] = [
   { id: 63, text: { en: "I work hard.", id: "Saya bekerja keras." }, trait: "conscientiousness", reverse: false },
   { id: 64, text: { en: "I do just enough work to get by.", id: "Saya bekerja sekadarnya saja." }, trait: "conscientiousness", reverse: true },
   { id: 65, text: { en: "I set high standards for myself and others.", id: "Saya menetapkan standar tinggi untuk diri sendiri dan orang lain." }, trait: "conscientiousness", reverse: false },
-  { id: 66, text: { en: "I don't see things through.", id: "Saya jarang menuntaskan sesuatu sampai akhir." }, trait: "conscientiousness", reverse: true },
+  { id: 66, text: { en: "I don't see things through.", id: "Saya tidak memperhatikan sesuatu dengan jelas." }, trait: "conscientiousness", reverse: true },
   { id: 67, text: { en: "I demand quality.", id: "Saya menuntut kualitas." }, trait: "conscientiousness", reverse: false },
   { id: 68, text: { en: "I do things I later regret.", id: "Saya sering melakukan hal yang saya sesali kemudian." }, trait: "conscientiousness", reverse: true },
   { id: 69, text: { en: "I stick to my chosen path.", id: "Saya berpegang teguh pada jalan yang saya pilih." }, trait: "conscientiousness", reverse: false },
@@ -101,7 +101,7 @@ const additionalQuestions: Question[] = [
   { id: 73, text: { en: "I plan ahead.", id: "Saya merencanakan segala sesuatunya terlebih dahulu." }, trait: "conscientiousness", reverse: false },
   { id: 74, text: { en: "I make rash decisions.", id: "Saya membuat keputusan secara gegabah." }, trait: "conscientiousness", reverse: true },
   { id: 75, text: { en: "I am goal oriented.", id: "Saya berorientasi pada tujuan." }, trait: "conscientiousness", reverse: false },
-  { id: 76, text: { en: "I jump into things without thinking.", id: "Saya langsung terjun ke sesuatu tanpa berpikir." }, trait: "conscientiousness", reverse: true },
+  { id: 76, text: { en: "I am often careless.", id: "Saya sering kali ceroboh." }, trait: "conscientiousness", reverse: true },
   { id: 77, text: { en: "I turn plans into actions.", id: "Saya mengubah rencana menjadi tindakan." }, trait: "conscientiousness", reverse: false },
   { id: 78, text: { en: "I make mistakes.", id: "Saya sering melakukan kesalahan." }, trait: "conscientiousness", reverse: true },
   { id: 79, text: { en: "I excel in what I do.", id: "Saya unggul dalam apa yang saya kerjakan." }, trait: "conscientiousness", reverse: false },
@@ -149,7 +149,7 @@ const additionalQuestions: Question[] = [
   { id: 117, text: { en: "I value cooperation over competition.", id: "Saya lebih menghargai kerja sama daripada kompetisi." }, trait: "agreeableness", reverse: false },
   { id: 118, text: { en: "I am judgmental of others.", id: "Saya suka menghakimi orang lain." }, trait: "agreeableness", reverse: true },
   { id: 119, text: { en: "I treat others with kindness.", id: "Saya memperlakukan orang lain dengan baik." }, trait: "agreeableness", reverse: false },
-  { id: 120, text: { en: "I am critical of others.", id: "Saya sering mengkritik orang lain." }, trait: "agreeableness", reverse: true },
+  { id: 120, text: { en: "I am critical of others.", id: "Saya kritis terhadap orang lain." }, trait: "agreeableness", reverse: true },
 
   //Additional Neuroticism questions (121-140)
   { id: 121, text: { en: "I often feel insecure about my future.", id: "Saya sering merasa tidak yakin dengan masa depan saya." }, trait: "neuroticism", reverse: false },
@@ -163,7 +163,7 @@ const additionalQuestions: Question[] = [
   { id: 129, text: { en: "I tend to take criticism very personally.", id: "Saya cenderung mengambil kritik secara pribadi." }, trait: "neuroticism", reverse: false },
   { id: 130, text: { en: "I accept feedback calmly and objectively.", id: "Saya menerima masukan dengan tenang dan objektif." }, trait: "neuroticism", reverse: true },
   { id: 131, text: { en: "I often feel emotionally drained.", id: "Saya sering merasa lelah secara emosional." }, trait: "neuroticism", reverse: false },
-  { id: 132, text: { en: "I feel emotionally recharged after rest.", id: "Saya merasa segar kembali setelah beristirahat." }, trait: "neuroticism", reverse: true },
+  { id: 132, text: { en: "I feel emotionally recharged after rest.", id: "Saya merasa segar secara emosional setelah beristirahat." }, trait: "neuroticism", reverse: true },
   { id: 133, text: { en: "I sometimes cry without a clear reason.", id: "Saya kadang menangis tanpa alasan yang jelas." }, trait: "neuroticism", reverse: false },
   { id: 134, text: { en: "I rarely feel like crying.", id: "Saya jarang merasa ingin menangis." }, trait: "neuroticism", reverse: true },
   { id: 135, text: { en: "I feel nervous when talking to authority figures.", id: "Saya merasa gugup saat berbicara dengan atasan atau tokoh otoritas." }, trait: "neuroticism", reverse: false },
@@ -171,7 +171,7 @@ const additionalQuestions: Question[] = [
   { id: 137, text: { en: "I dwell on negative thoughts.", id: "Saya sering tenggelam dalam pikiran negatif." }, trait: "neuroticism", reverse: false },
   { id: 138, text: { en: "I find it easy to focus on the positive.", id: "Saya mudah fokus pada hal-hal positif." }, trait: "neuroticism", reverse: true },
   { id: 139, text: { en: "I often feel embarrassed over small things.", id: "Saya sering merasa malu karena hal-hal kecil." }, trait: "neuroticism", reverse: false },
-  { id: 140, text: { en: "I rarely feel self-conscious.", id: "Saya jarang merasa canggung dengan diri sendiri." }, trait: "neuroticism", reverse: true },
+  { id: 140, text: { en: "I rarely feel self-conscious.", id: "Saya jarang merasa sadar diri." }, trait: "neuroticism", reverse: true },
 ]
 
 // Function to shuffle array using Fisher-Yates algorithm
