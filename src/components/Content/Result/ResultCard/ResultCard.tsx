@@ -25,11 +25,7 @@ export default function ResultCard({
     : [];
 
   return (
-    <Stack
-      w={"100%"}
-      align="center"
-      pos={"relative"}
-    >
+    <Stack w={"100%"} align="center" pos={"relative"}>
       <ShinyText
         text={dominantTrait}
         speed={5}
@@ -107,8 +103,14 @@ export default function ResultCard({
                   opacity: 0.5,
                 },
                 domain([dataMin, dataMax]) {
-                  const start = (dataMin - 10 <= 0) ? 0 : dataMin - 10;
-                  const end = (dataMax + 10 >= 100) ? 100 : dataMax + 10;
+                  const start = Math.max(
+                    0,
+                    Math.floor((dataMin - 10) / 10) * 10
+                  );
+                  const end = Math.min(
+                    100,
+                    Math.ceil((dataMax + 10) / 10) * 10
+                  );
                   return [start, end];
                 },
               }}

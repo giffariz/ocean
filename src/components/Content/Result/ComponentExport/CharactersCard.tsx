@@ -9,7 +9,7 @@ interface ICharacterCardProps {
   cardColor: string;
   radarData: {
     Trait: string;
-    Score: number;
+    Score: string;
   }[];
 }
 export default function CharactersCard(props: Readonly<ICharacterCardProps>) {
@@ -89,7 +89,15 @@ export default function CharactersCard(props: Readonly<ICharacterCardProps>) {
                   opacity: 0.5,
                 },
                 domain([dataMin, dataMax]) {
-                  return [dataMin - 30, dataMax + 10];
+                  const start = Math.max(
+                    0,
+                    Math.floor((dataMin - 10) / 10) * 10
+                  );
+                  const end = Math.min(
+                    100,
+                    Math.ceil((dataMax + 10) / 10) * 10
+                  );
+                  return [start, end];
                 },
               }}
               bdrs={"xl"}

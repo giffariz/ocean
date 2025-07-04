@@ -30,7 +30,7 @@ export default function ShareButton(props: Readonly<IShareButtonProps>) {
   const radarData = props.scores
     ? Object.entries(props.scores).map(([trait, score]) => ({
         Trait: trait.charAt(0).toUpperCase(),
-        Score: score,
+        Score: score.toFixed(0),
       }))
     : [];
 
