@@ -102,17 +102,8 @@ export default function ResultCard({
                   fontSize: 12,
                   opacity: 0.5,
                 },
-                domain([dataMin, dataMax]) {
-                  const start = Math.max(
-                    0,
-                    Math.floor((dataMin - 10) / 10) * 10
-                  );
-                  const end = Math.min(
-                    100,
-                    Math.ceil((dataMax + 10) / 10) * 10
-                  );
-                  return [start, end];
-                },
+                domain: [0, 100],
+                tickCount: 3,
               }}
               bdrs={"xl"}
               className={style.chart}
