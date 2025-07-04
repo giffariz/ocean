@@ -1,0 +1,19 @@
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: -20px;
+  @media (min-width: $mantine-breakpoint-sm) {
+    letter-spacing: -3px;
+    font-size: 60px;
+  }
+}
+
+.chart {
+  background: rgba(0, 0, 0, 0.3);
+  padding-top: 10px;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px);
+  aspect-ratio: 1 / 1;
+  z-index: 3;
+}

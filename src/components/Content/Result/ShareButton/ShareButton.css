@@ -1,0 +1,10 @@
+#share-result {
+  width: 540px;
+  height: 960px;
+  aspect-ratio: 9 / 16;
+  background: black;
+  padding: 0;
+  position: absolute;
+  left: -9999px;
+  top: 0;
+}

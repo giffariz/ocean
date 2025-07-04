@@ -16,7 +16,7 @@ export const Footer = (props: IFooterProps) => {
   const { lang } = useLanguage();
 
   return (
-    <Group w={{ base: "100%", lg: "30%" }} justify="space-between">
+    <Group w={{ base: "100%", md: "30%" }} justify="space-between">
       <Button
         w={"38%"}
         disabled={props.currentPage === 0}

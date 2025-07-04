@@ -20,7 +20,7 @@ export const Questions = ({
   const { t, lang } = useLanguage();
 
   return (
-    <Stack w={{ base: "100%", lg: "60%" }} align="center" m={"md"}>
+    <Stack w={{ base: "100%", md: "60%" }} align="center" m={"md"}>
       {currentQuestions.map((q, i) => (
         <Card
           w={"100%"}

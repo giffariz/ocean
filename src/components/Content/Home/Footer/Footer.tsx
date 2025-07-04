@@ -38,6 +38,7 @@ export default function Footer() {
                   size="sm"
                   fw={300}
                   c="dimmed"
+                  td={"underline"}
                 >
                   {item.description}
                 </Text>
@@ -58,6 +59,7 @@ export default function Footer() {
           target="_blank"    
           c={"var(--mantine-color-lime-4)"}
           fw={600}
+          td={"underline"}
         >
           {t.footer.textLink}
         </Text>

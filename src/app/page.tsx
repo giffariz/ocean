@@ -1,36 +1,35 @@
 "use client";
 import { AppShell, Grid, Group, Stack, Text, Title } from "@mantine/core";
-import style from "./page.module.css";
-import LanguageToggle from "@/components/LanguageToggle/LanguageToggle";
-import BrainRing from "@/components/Content/Home/BrainRing/BrainRing";
 import { useLanguage } from "@/context/LanguageContext";
 import { IconSparkles } from "@tabler/icons-react";
+import { leagueSpartanClass } from "@/lib/font";
+import BrainRing from "@/components/Content/Home/BrainRing/BrainRing";
 import ScrollVelocity from "@/components/ReactBits/ScrollVelocity/ScrollVelocity";
 import CharactersCard from "../components/Content/Home/CharactersCard/CharactersCard";
 import clsx from "clsx";
 import TestCard from "@/components/Content/Home/TestCard/TestCard";
 import Footer from "@/components/Content/Home/Footer/Footer";
-import { leagueSpartanClass } from "@/lib/font";
+import Header from "@/components/Header/Header";
+import style from "./page.module.css";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const { t } = useLanguage();
+  const [tested, setTested] = useState(false);
+
+  useEffect(() => {
+    const answersData = localStorage.getItem("big5-answers");
+    const questionsData = localStorage.getItem("big5-questions");
+
+    if (answersData && questionsData) {
+      setTested(true);
+    }
+  }, []);
 
   return (
     <AppShell header={{ height: 60 }} padding="md" withBorder={false}>
       <AppShell.Header className={style.header}>
-        <Group
-          w={{ base: "60%", md: "20%" }}
-          align="center"
-          justify="space-between"
-          px={"sm"}
-          py={"xs"}
-          className={style.glassmorphism}
-        >
-          <Text fw={700} c={"var(--mantine-color-lime-4)"} size="xl">
-            OCEAN
-          </Text>
-          <LanguageToggle />
-        </Group>
+        <Header />
       </AppShell.Header>
 
       <AppShell.Main className={style.main}>
@@ -83,7 +82,7 @@ export default function Home() {
             />
           </div>
 
-          <TestCard />
+          <TestCard haveResult={tested} />
         </div>
 
         <div className={style.footer}>
