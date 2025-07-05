@@ -31,7 +31,6 @@
 .charts {
   width: 100%;
   background: black;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;

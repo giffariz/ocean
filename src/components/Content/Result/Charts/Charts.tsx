@@ -33,8 +33,31 @@ export default function Charts({ scores, distScores }: Readonly<IChartsProps>) {
     : [];
 
   return (
-    <Card w={{ base: "90%", md: "50%" }} bg={"transparent"}>
-      <Grid w={"100%"} gutter={"md"}>
+    <Card w={{ base: "90%", md: "50%" }} bg={"transparent"} mt={"md"}>
+      <Text
+        className={leagueSpartanClass}
+        fw={700}
+        fz={{ base: "h1", md: "60px" }}
+        c={"var(--mantine-color-lime-4)"}
+        w={"100%"}
+        ta={"center"}
+        lh={"0.9"}
+        mt={"md"}
+      >
+        {t.others.closure1}
+      </Text>
+      <Text
+        className={leagueSpartanClass}
+        fz={{ base: "md", md: "xl" }}
+        w={"100%"}
+        ta={"center"}
+        style={{ textWrap: "balance" }}
+        lh={"0.9"}
+        // mt={"-xs"}
+      >
+        {t.others.closure2}
+      </Text>
+      <Grid w={"100%"} gutter={"md"} mt={"md"}>
         <Grid.Col
           span={{ base: 12, sm: 6 }}
           w={"100%"}
@@ -43,7 +66,7 @@ export default function Charts({ scores, distScores }: Readonly<IChartsProps>) {
         >
           <Card w={"100%"} bdrs={"xl"} bg={"transparent"}>
             <Stack w={"100%"} align="center">
-              <Text className={leagueSpartanClass} fz={"h1"} fw={600}>
+              <Text className={leagueSpartanClass} fz={"lg"} mb={"-xs"}>
                 {t.result.absolute}
               </Text>
               <Grid grow gutter="md" className={styles.gridContainer}>
@@ -83,7 +106,7 @@ export default function Charts({ scores, distScores }: Readonly<IChartsProps>) {
         >
           <Card w={"100%"} bdrs={"xl"} bg={"transparent"}>
             <Stack w={"100%"} align="center">
-              <Text className={leagueSpartanClass} fz={"h1"} fw={600}>
+              <Text className={leagueSpartanClass} fz={"lg"} mb={"-xs"}>
                 {t.result.relative}
               </Text>
               <Grid grow gutter="md" className={styles.gridContainer}>

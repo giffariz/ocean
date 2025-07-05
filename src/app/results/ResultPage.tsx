@@ -15,6 +15,7 @@ import TraitDesc from "@/components/Content/Result/TraitDesc/TraitDesc";
 import Charts from "@/components/Content/Result/Charts/Charts";
 import ShareButton from "@/components/Content/Result/ShareButton/ShareButton";
 import NoResult from "@/components/Content/Result/NoResult/NoResult";
+import OthersTrait from "@/components/Content/Result/OthersTrait/OthersTrait";
 
 function ResultPage() {
   const { t, lang } = useLanguage();
@@ -112,8 +113,15 @@ function ResultPage() {
         </div>
 
         <div className={style.charts}>
+          <div className={style.velocity} style={{ color: "#1f1f1f" }}>
+            <ScrollVelocity
+              texts={[t.others.velocity]}
+              velocity={30}
+              className={leagueSpartanClass}
+            />
+          </div>
+          <OthersTrait dominantTrait={dominantTrait} scores={distScores}/>
           <Charts scores={scores} distScores={distScores} />
-
           <ShareButton
             dominantTrait={dominantTrait}
             scores={scores}
