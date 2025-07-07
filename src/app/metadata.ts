@@ -6,6 +6,10 @@ export const sharedMetadata: Metadata = {
     keywords: [
         "Giffari Zakawaly",
         "OCEAN",
+        "OCEAN Personality Test",
+        "OCEAN Big 5",
+        "Big 5",
+        "Big 5 Personality Test",
         "Personality",
         "Personality Test",
         "Openness",
